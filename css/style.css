@@ -1,0 +1,278 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: lobster;
+    color:#fcfcfc
+}
+
+body{
+    display:-moz-box;
+    display:-webkit-box;
+    
+    width:100%;
+    height:100%;
+    
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+    
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    
+    background:url('../img/bg.png') repeat;
+    background-attachment:fixed;
+    box-shadow:inset 0 0 150px rgba(0,0,0,0.4);
+}
+
+.gen-wrapper{
+    max-width:1200px;
+    
+    display:-moz-box;
+    display:-webkit-box;
+    
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+     
+    -webkit-box-pack:start;
+    
+    -moz-box-align:center;
+    -webkit-box-align:center;
+    
+    -moz-box-pack:center;
+    -webkit-box-pack:center;
+}
+
+.dev-container, .logo-container{
+    display:-moz-box;
+    display:-webkit-box;    
+    
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+    
+    -moz-box-pack:center;
+    -webkit-box-pack:center;
+    
+    -moz-box-align:center;
+    -webkit-box-align:center;
+}
+
+.logo-container{
+    margin-top:40px;
+    position:relative;
+}
+
+.logo-container .yoda-avatar{
+    max-width:210px;
+    height:254px;
+    
+    background-size:contain;
+}
+
+.yoda-avatar{
+    max-width:300px;
+    height:360px;
+    
+    width:100%;
+    cursor:pointer;
+    
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    
+    background:url('../img/avatar.png');
+    background-size:contain;
+    
+    transition:all 500ms ease;
+}
+
+.yoda-avatar:hover{} /* Эффекты для Йоды */
+
+.name{
+    cursor:pointer;
+    color:#fcfcfc;
+    font-size:95px;
+    text-shadow:2px 0 rgba(0,186,255,0.67);
+}
+
+.name.pages{
+    font-size:50px;
+}
+
+/* Форма для подписки на обновления */
+
+.subscribe{
+    display:-webkit-box;
+    display:-moz-box;    
+    min-height:37px;
+    
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    
+    margin-top:35px;
+}
+
+.subscribe label{
+    margin-top:2px;
+    color:#fcfcfc;
+    font-size:30px;
+    text-shadow:2px 0 rgba(0,186,255,0.67);
+}
+
+.subscribe input{
+    display:block;
+    margin-top:1px;
+    margin-left:20px;
+    border-radius:5px;
+    border:none;
+    padding:5px 10px;
+    font-size:20px;
+    box-shadow:0 2px 0 rgba(0,186,255,0.67);
+    transition:all 300ms ease;
+}
+
+.subscribe input[type="email"]{
+    width:200px;
+    color:#0f0f0f;
+    outline:none !important;
+    box-shadow:0 2px 0 #fff;
+}
+
+
+.subscribe input[type="submit"]{
+    background:rgba(0,186,255,0.67);
+    color:#fff;
+    cursor:pointer;
+    outline:none;
+}
+
+.subscribe input[type="submit"]:active{
+    box-shadow:0 2px 0 rgba(0,186,255,0.67);
+    transition:box-shadow 100ms ease;
+}
+
+.subscribe input:hover, .subscribe input:focus{
+    box-shadow:0 2px 0 #0393c8;
+}
+
+/* Секция цитаты */
+
+.quote{
+    display:-moz-box;
+    display:-webkit-box;
+    
+    -webkit-box-orient:vertical;
+    -moz-box-orient:vertical;
+    
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    
+    -webkit-box-align:center;
+    -moz-box-align:center;
+    
+    margin-top:40px;
+}
+
+.quote-line{
+    display:-moz-box;
+    display:-webkit-box;
+    
+    -webkit-box-pack:center;
+    -moz-box-pack:center;
+    
+    -webkit-box-align:center;
+    -moz-box-align:center;   
+}
+
+.quote-info{
+    display:-webkit-box;
+    display:-moz-box;
+    
+    width:100%;
+    
+    -webkit-box-pack:end;
+    -moz-box-pack:end;
+    
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+}
+
+.quote-icon-open, .quote-icon-close{
+    width:63px;
+    height:41px;
+}
+
+.quote-icon-open{
+    background:url('../img/quote-open.png') left top no-repeat;
+    padding-bottom:62px;
+    padding-right:13px
+}
+
+.quote-icon-close{
+    background:url('../img/quote-close.png') right bottom no-repeat;
+    padding-top:70px;
+    padding-left:15px
+}
+
+.quote-text{   
+    color:#fcfcfc;
+    text-shadow:2px 0 rgba(0,0,0,0.20);
+    font-size:30px;
+    
+    -webkit-box-flex:1;
+    -moz-box-flex;
+    
+    max-width:1000px;
+}
+
+.quote-author{
+   padding-right:110px; 
+    font-size:30px;
+}
+
+/* Кнопка на главной для получения цитаты */
+
+.get-quote-btn{
+    display:block;
+    text-decoration:none;
+    margin-top:20px;
+    font-size:30px;
+    padding:10px 15px;
+    color:rgba(0,186,255,1);
+    border-radius:10px;
+    background:#fcfcfc;
+    cursor:pointer;
+    transition:all 300ms ease;
+    box-shadow:0 0px 15px rgba(0,0,0,0.3), inset 0 0px 0px rgba(0,186,255,1);
+}
+
+.get-quote-btn:hover{
+    box-shadow:0 0px 0 rgba(0,0,0,0.3), inset 0 -4px 0px rgba(0,186,255,1);
+}
+
+.get-quote-btn:active{
+    margin-top:23px;
+    padding-top:13px;
+    box-shadow:none;   
+}
+
+/* кнопка показывающая новую цитату (обновление страницы */
+
+.one-more{
+    display:none;
+    position:absolute;
+    right:-100px;
+    top:25px;
+    padding:15px 20px;
+    font-size:26px;
+    background:#fcfcfc;
+    color:rgba(0,186,255,1);
+    border-radius:15px;
+    border-bottom-left-radius:0px;
+    cursor:pointer;
+    box-shadow:0 0 3px rgba(0,0,0,0.5);
+    border:1px solid rgba(0,186,255,0.2);
+}
