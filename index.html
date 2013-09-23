@@ -12,6 +12,24 @@
                 $(window).resize(function(){
                     $('body').css('height',$(window).height());    
                 });
+                $('.quote-text').bind('mousedown',function(){
+                    var posInfo = $('.quote-info').position();
+                    var widthInfo = $('.quote-info').width();
+                    var heightInfo = $('.quote-info').height();
+                    $('.quote-info').css('left',posInfo.left).css('top',posInfo.top).css('position','fixed').css('width',widthInfo).css('height',heightInfo); 
+                    var pos = $('.quote-text').position();
+                    var width = $('.quote-text').width();
+                    var height = $('.quote-text').height();
+                    $('.quote-text').css('left',pos.left).css('top',pos.top).css('position','fixed').css('width',width).css('height',height);
+                    $('.quote-text').mousemove(function(e){
+                        var shiftX = $(this).css('left');
+                        $(this).css('left',e.pageX-width/2);
+                        //if(e.pageX >= (($(window).width()/2)+30){
+                        //   $(this).css('opacity','0.3');
+                        //   }
+                    });
+                });
+                $('.quote-text').mouseup(function(){$(this).unbind('mousedown, mousemove')});
             });
         </script>
     </head>
