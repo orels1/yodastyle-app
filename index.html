@@ -15,6 +15,16 @@
                 $(window).resize(function(){
                     $('body').css('height',$(document).height());    
                 });
+                $('.one-more').click(function(){
+                    $.get("http://yodastyle.ru/mobile-api",'',success); 
+                    function success(Data){
+                        alert(Data);
+                        var output = $.parseJSON(Data);
+                        alert(output.quoteText);
+                        $('.quote-text').text(output.quoteText);
+                        $('.quote-author').text(output.quoteAuthor);
+                    }
+                });
             });
         </script>
     </head>

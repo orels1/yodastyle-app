@@ -166,6 +166,7 @@ body{
 }
 
 .one-more{
+    cursor:pointer;
     margin:0 auto;
     padding:10px 20px;
     background:#ededed;
